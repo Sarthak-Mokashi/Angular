@@ -1,0 +1,20 @@
+<div>
+    <div>
+        <div>
+            <h4>Parent Component</h4>
+        </div>
+
+        <div class="card-body">
+            Pass Data: <input type="text"/>
+            <input type="button" value="SEND" (click)="TransferData()"/>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  <app-child [parentData]="parentData"></app-child> 
+  <!-- {{value}}   -->
+<!-- <app-child (sendData)="sendChildData($event)"></app-child>   -->

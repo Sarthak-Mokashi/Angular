@@ -1,0 +1,116 @@
+<h1> List of Countries </h1>
+
+<!-- <ul>
+    <li *ngFor = "let country of countries">                              // Normal For Loop
+        {{ country.name }}
+    </li>
+</ul> -->
+
+
+
+<!-- <ul>
+    <li *ngFor = "let country of countries">                             
+        {{ country.name }} {{ country.national_language}} {{ country.currency }}           // With multiple parameters
+    </li>
+</ul> -->
+
+
+
+<!-- <ul>
+    <li *ngFor = "let country of countries; index as i">                             
+        {{ i }}{{ country.name }} {{ country.national_language}} {{ country.currency }}        // Using Local Variables
+    </li>
+</ul> -->
+
+
+
+ <!-- <ul>
+    <li *ngFor = "let country of countries; index as i; first as f; last as l"> 
+        <div *ngIf ="f" style="background-color:rgb(16, 191, 214);">This is First Record</div>  
+            <div>                                                                                       
+              {{ i }} {{ country.name }} {{ country.national_language}} {{ country.currency }}          
+            </div>
+        <div *ngIf ="l" style="background-color:rgb(20, 179, 60);">This is Last Record</div>
+    </li>
+</ul>  -->
+
+
+<!--  -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+                                                  <!--      TASK - Country Table        --> 
+
+   
+    <!-- <table align="center" border="1">    
+        <thead>    
+            <tr>    
+                <th style="background-color: #0086dc;color: white">Name</th>    
+                <th style="background-color: #0086dc;color: white">National Language</th>    
+                <th style="background-color: #0086dc;color: white">Currency</th>
+                <th style="background-color: #0086dc;color: white">No. of States</th>    
+            </tr>    
+        </thead>    
+        <tbody>    
+            <tr *ngFor='let country of countries'>    
+                <td  (click)="toggle($event)">{{country['name']}}
+                  
+                    <tr *ngIf="showData">
+                        <table align="center">
+                            <thead>    
+                                <tr>    
+                                    <th style="background-color: #0086dc;color: white">State Name</th>    
+                                    <th style="background-color: #0086dc;color: white">Code</th>
+                                    <th style="background-color: #0086dc;color: white">No. of Cities</th>
+                                    <th style="background-color: #0086dc;color: white">Capital</th>
+                                </tr>    
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let countryDetails of country.state">
+                                    <td>{{countryDetails.name}}</td>
+                                    <td>{{countryDetails.code}}</td>
+                                    <td>{{countryDetails.cities}}</td>
+                                    <td>{{countryDetails.capital}}</td>
+                                </tr>
+                            </tbody>    
+                        </table>
+                    </tr>
+                
+                </td>
+                <td>{{country.national_language}}</td>    
+                <td>{{country.currency}}</td> 
+                <td>{{country.state_count}}</td> 
+                
+            </tr> 
+                 
+             <tr>    
+                <td>    
+                    No countries to show in the page....    
+                </td>    
+        </tbody>    
+    </table>        
+
+    <button (click)="dataService.callingFromTemplate()">Calling Directly From Template</button> -->
+
+
+    
+ <table>
+       <tr>
+            <th *ngFor="let column of tableHeaders"> 
+               {{column}}
+           </th>
+       </tr>
+
+        <tr *ngFor="let row of countries"> 
+            <td *ngFor="let column of tableHeaders">  
+                 {{row[column]}} 
+                 <!-- {{row[column].national_language}}
+                {{row[column].currency}}
+                {{row[column].state_count}}   -->
+            </td>
+       </tr>
+       <tr *ngFor="let countryDetails of countries.State">
+            <td>{{countryDetails.Name}}</td>
+            <td>{{countryDetails.Code}}</td>
+            <td>{{countryDetails.Cities}}</td>
+            <td>{{countryDetails.Capital}}</td>
+       </tr>
+   </table>       

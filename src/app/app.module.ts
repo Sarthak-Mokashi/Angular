@@ -3,16 +3,38 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { TestEncapsulationComponent } from './test-encapsulation/test-encapsulation.component';
+import { NgifDemoComponent } from './ngif-demo/ngif-demo.component';
+import { NgforDemoComponent } from './ngfor-demo/ngfor-demo.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule} from '@angular/forms';
+
+//  import {HashLocationStrategy , LocationStrategy} from '@angular/common';           // For HashLocation Routing Strategy
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ParentComponent,
+    ChildComponent,
+    TestEncapsulationComponent,
+    NgifDemoComponent,
+    NgforDemoComponent,
+    PipesComponent,
+    DataBindingComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+   // { provide: LocationStrategy , useClass: HashLocationStrategy}                         // For HashLocation Routing Strategy
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

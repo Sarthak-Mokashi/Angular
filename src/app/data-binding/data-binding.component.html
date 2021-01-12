@@ -1,0 +1,76 @@
+<h1> Data-Binding Examples </h1>
+
+<!-- -------------- INTERPOLATION {{ }} ------------------ -->
+
+<!-- <div>{{ heading }}</div>                                               // String
+
+<p>{{ page_count }}</p>                                                     // Integer
+
+<div>{{ user_object }}</div>                                                // Object
+<div>{{ user_object.firstName }} {{ user_object.lastName }}</div>           // Accessing Object using key
+
+<br>
+
+<div *ngFor = "let name of names">                                          // Array
+    {{ name.firstName }} {{ name.lastName }}
+</div> -->
+
+<!------------------------------------------------------------>
+
+
+
+<!-- -------------- PROPERTY BINDING [] ------------------ -->
+
+<!-- <div [innerHTML]="user_object.firstName"></div>                         // Data is automatically pushed inside <div> 
+<br>
+<img [src]="imgURL" [alt]="imgALT"/>
+<br>
+<br>
+<div [style.color]="txtColor">{{ heading }}</div> -->
+
+<!------------------------------------------------------------>
+
+
+
+<!-- -------------- ATTRIBUTE BINDING [attr.attribute_name] ------------------ -->
+
+<!-- <table style="background-color: #ddd;">
+  <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Department</td>
+      <td>Business Unit</td>
+  </tr>
+  <tr>
+     <td [colspan]="colVal">Contact</td>           // error NG8002 : Can't bind 'colspan' since it isn't a known property of 'td'. 
+     
+      <td [attr.colspan]="colVal">Contact</td>          // Works perfectly fine !!
+      <td>Email</td>
+      <td>Qualification</td>
+      <td>Trainings</td>
+</tr>
+</table> -->
+
+<!------------------------------------------------------------>
+
+
+
+<!-- -------------- EVENT BINDING () ------------------ -->
+
+<!-- <button (click)="eventCall()">Click Here</button>
+<br>
+<br>
+<br>
+<div (onmouseover)="alertMe()">Alert Me</div>
+<br>
+<br>
+<input type="text" (focus)="inputBox();"> -->
+
+<!------------------------------------------------------------>
+
+
+
+<!-- -------------- TWO-WAY BINDING [()] ------------------ -->
+
+<input [(ngModel)]="username" />
+<div>{{ username }}</div>
