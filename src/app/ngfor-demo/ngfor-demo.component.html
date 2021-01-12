@@ -100,17 +100,39 @@
        </tr>
 
         <tr *ngFor="let row of countries"> 
-            <td *ngFor="let column of tableHeaders">  
+            <td *ngFor="let column of tableHeaders;index as i" ; (click)="toggle($event)">  
                  {{row[column]}} 
-                 <!-- {{row[column].national_language}}
-                {{row[column].currency}}
-                {{row[column].state_count}}   -->
             </td>
        </tr>
-       <tr *ngFor="let countryDetails of countries.State">
-            <td>{{countryDetails.Name}}</td>
-            <td>{{countryDetails.Code}}</td>
-            <td>{{countryDetails.Cities}}</td>
-            <td>{{countryDetails.Capital}}</td>
-       </tr>
-   </table>       
+   </table>   
+   <br>    
+<hr>
+   <br>
+
+    <table *ngIf="showData">
+        <tr >
+            <th *ngFor="let column of stateTableHeaders"> 
+               {{column}}
+            </th>
+        </tr>
+
+        <tr *ngFor="let row of countries[index].State"> 
+            <td *ngFor="let column of stateTableHeaders">  
+              {{row[column]}} 
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- <table>
+        <tr *ngFor="let countryDetails of countries">
+            <td *ngFor="let states of countryDetails.state">
+                 {{countryDetails[headers]}}</td> 
+            <td>{{countryDetails[states]}}</td>
+            <td>{{countryDetails.State.Cities}}</td>
+            <td>{{countryDetails.State.Capital}}</td>
+        </tr>
+    </table> -->
