@@ -99,8 +99,8 @@
            </th>
        </tr>
 
-        <tr *ngFor="let row of countries"> 
-            <td *ngFor="let column of tableHeaders" (click)="toggle($event)">  
+        <tr *ngFor="let row of countries; let i=index;"> 
+            <td *ngFor="let column of tableHeaders" (click)="toggle($event,i)">  
                  {{row[column]}} 
             </td>
        </tr>
@@ -116,7 +116,7 @@
             </th>
         </tr>
 
-        <tr *ngFor="let row of countries[0].State"> 
+        <tr *ngFor="let row of countries[countryIndex].State"> 
             <td *ngFor="let column of stateTableHeaders">  
               {{row[column]}} 
             </td>
