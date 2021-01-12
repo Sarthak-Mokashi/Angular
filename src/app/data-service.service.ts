@@ -24,6 +24,11 @@ export class DataServiceService {
     return tableHeaders;
    }
 
+   getStateHeaders(){
+    const stateTableHeaders = [ "Name" , "Code" , "Cities" , "Capital" ];
+    return stateTableHeaders;
+   }
+
   getCountries(){
   
   const countries = [

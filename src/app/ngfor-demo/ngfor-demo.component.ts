@@ -8,6 +8,7 @@ import { DataServiceService } from '../data-service.service';
 })
 export class NgforDemoComponent implements OnInit {
   
+  
 
  // constructor(private dataService : DataServiceService) { }              // If calling Service's Method only from this Class
 
@@ -22,12 +23,16 @@ export class NgforDemoComponent implements OnInit {
 
   }
 
-  countries :any = [];
+  
   tableHeaders: any = [];
+  stateTableHeaders: any = [];
+  countries :any = [];
+  
   ngOnInit(): void {
 
     console.log(this.dataService.getCountries());
     this.tableHeaders = this.dataService.getCountriesHeaders();
+    this.stateTableHeaders = this.dataService.getStateHeaders();
     this.countries = this.dataService.getCountries();
 
     }

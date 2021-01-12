@@ -4,7 +4,14 @@ table {
     width: 100%;    
 }    
 
-td, th {    
+th{
+    background-color: #0086dc;
+    color: white;
+    padding: 8px;
+    border: 1px solid #dddddd;
+}
+
+td {    
     border: 1px solid #dddddd;    
     text-align: left;    
     padding: 8px;  
