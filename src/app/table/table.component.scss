@@ -1,0 +1,43 @@
+table {    
+    font-family: arial, sans-serif;    
+    border-collapse: collapse;    
+    width: 100%;    
+}    
+
+th{
+    background-color: #0086dc;
+    color: white;
+    padding: 8px;
+    border: 1px solid #dddddd;
+}
+
+td {    
+    border: 1px solid #dddddd;    
+    text-align: left;    
+    padding: 8px;  
+}    
+
+tr:nth-child(even) {    
+    background-color: #dddddd;    
+} 
+
+.buttonStyle{
+    background-color: #0086dc;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttonStyle:hover {opacity: 5}
+
+input{
+    display :inline-block;
+}

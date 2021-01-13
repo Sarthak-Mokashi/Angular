@@ -1,1 +1,12 @@
-<h4>Child Component</h4> {{parentData}}
+<!-- <h4>Child Component</h4> {{parentData}} -->
+
+<!-- <p>From Parent :  {{ name }}</p>                  // New Demo                 -->
+
+<h1> List of Names </h1>
+<br>
+
+<ul>
+    <li *ngFor="let name of list">
+        {{ name }}
+    </li>
+</ul>
