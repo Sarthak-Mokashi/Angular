@@ -1,0 +1,70 @@
+<table>
+  <tr>
+       <th *ngFor="let column of tableHeaders"> 
+          {{column}}
+      </th>
+  </tr>
+
+   <tr *ngFor="let row of countries; let i=index;"> 
+       <td *ngFor="let column of tableHeaders" (click)="toggle($event,i)">  
+            {{row[column]}} 
+       </td>
+  </tr>
+</table>   
+<br>    
+<hr>
+<br>
+
+<div *ngIf="showData">
+<button type="button" class="buttonStyle" (click)="setForm($event)">Add State</button>
+
+<form *ngIf="showForm">
+State Name : <input type="text" id="stateName" value=""><br>
+
+State Code : <input type="text" id="stateCode" name="stateCode" value=""><br><br>
+
+Number of Cities  : <input type="text" id="cities" name="cities" value=""><br>
+
+Capital : <input type="text" id="capital" name="capital" value=""><br><br>
+
+<input type="submit" value="Submit">
+</form>
+
+<table >
+   <tr >
+       <th *ngFor="let column of stateTableHeaders;index as i"> 
+          {{column}}
+       </th>
+   </tr>
+
+   <tr *ngFor="let row of countries[countryIndex].State"> 
+       <td *ngFor="let column of stateTableHeaders">  
+         {{row[column]}} 
+       </td>
+   </tr>
+</table>
+
+<br>
+<br>
+<br>
+</div>
+
+<!-- ----------------------------------------------------------------------------------------------- -->
+
+  <!-- <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+      </div>
+    </ng-template>
+    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openVerticallyCentered(content)">Modal vertically centered</button> -->
+
+<!-- ----------------------------------------------------------------------------------------------- -->

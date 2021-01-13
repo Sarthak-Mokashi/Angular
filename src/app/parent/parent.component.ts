@@ -6,12 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.scss']
 })
 export class ParentComponent implements OnInit {
- 
-  enterName = "Sarthak";
-  parentData = "";
-  TransferData() {
-  this.parentData = this.enterName;         //Static Property
+
+  constructor() { }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
+ 
+  // enterName = "Sarthak";
+  // parentData = "";
+  // TransferData() {
+  // this.parentData = this.enterName;         //Static Property
+  // }
 
 
   // value = "";
@@ -19,12 +24,21 @@ export class ParentComponent implements OnInit {
   // sendChildData(value: string){
   //    this.value = value;
   // }
-    
-   
-  constructor() { }
 
-  ngOnInit(): void {
-    console.log('Inside Parent OnInit !!');
+  // ------------------------------------------------------------------------- // 
+
+  // data ='';
+  // passValue(event: any){                                                        // New Demo
+  //   const value = event.target.value;
+  //   this.data = value;
+  // }
+
+  // ------------------------------------------------------------------------- // 
+
+  nameList: string[] = [];
+
+  passValue(event: any){                                                        
+       const value = event.target.value;
+       this.nameList.push(value);
   }
-
 }

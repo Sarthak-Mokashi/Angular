@@ -11,6 +11,7 @@ import { NgforDemoComponent } from './ngfor-demo/ngfor-demo.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule} from '@angular/forms';
+import { TableComponent } from './table/table.component';
 
 //  import {HashLocationStrategy , LocationStrategy} from '@angular/common';           // For HashLocation Routing Strategy
 
@@ -26,11 +27,12 @@ import { FormsModule} from '@angular/forms';
     NgforDemoComponent,
     PipesComponent,
     DataBindingComponent,
+    TableComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
    // { provide: LocationStrategy , useClass: HashLocationStrategy}                         // For HashLocation Routing Strategy
