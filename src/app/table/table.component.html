@@ -10,44 +10,63 @@
             {{row[column]}} 
        </td>
   </tr>
-</table>   
+</table> 
+
 <br>    
 <hr>
 <br>
 
 <div *ngIf="showData">
-<button type="button" class="buttonStyle" (click)="setForm($event)">Add State</button>
+   <button type="button" class="buttonStyle" (click)="setForm($event)">Add State</button>
 
-<form *ngIf="showForm">
-State Name : <input type="text" id="stateName" value=""><br>
+    <form [formGroup]="registerForm" *ngIf="showForm">
+      <div class="form-row">
+          <div class="form-group col-5">
+            <label>State Name : </label> 
+            <input type="text" formControlName="Name" class="form-control"/>
+          </div>
 
-State Code : <input type="text" id="stateCode" name="stateCode" value=""><br><br>
+          <div class="form-group col-5">
+            <label>State Code : </label> 
+            <input type="text" formControlName="Code" class="form-control"/>
+          </div>
 
-Number of Cities  : <input type="text" id="cities" name="cities" value=""><br>
+          <div class="form-group col-5">
+            <label>Number of Cities : </label> 
+            <input type="number" formControlName="Cities" class="form-control"/>
+          </div>
 
-Capital : <input type="text" id="capital" name="capital" value=""><br><br>
+          <div class="form-group col-5">
+            <label>Capital : </label> 
+            <input type="text" formControlName="Capital" class="form-control"/>
+          </div>
+          <br>
+          <br>
+          <div>
+            <input type="submit" value="Submit" (click)="onSubmit()">
+          </div>  
+      </div>
+    </form> 
 
-<input type="submit" value="Submit">
-</form>
 
-<table >
-   <tr >
-       <th *ngFor="let column of stateTableHeaders;index as i"> 
-          {{column}}
-       </th>
-   </tr>
+    <table >
+        <tr >
+            <th *ngFor="let column of stateTableHeaders;index as i"> 
+                {{column}}
+            </th>
+        </tr>
 
-   <tr *ngFor="let row of countries[countryIndex].State"> 
-       <td *ngFor="let column of stateTableHeaders">  
-         {{row[column]}} 
-       </td>
-   </tr>
-</table>
+        <tr *ngFor="let row of countries[countryIndex].State"> 
+            <td *ngFor="let column of stateTableHeaders">  
+              {{row[column]}} 
+            </td>
+        </tr>
+    </table>
 
-<br>
-<br>
-<br>
-</div>
+    <br>
+    <br>
+    <br>
+  </div>
 
 <!-- ----------------------------------------------------------------------------------------------- -->
 
