@@ -1,24 +1,41 @@
-<!-- <nav class "navbar navbar-dark bg-dark" style="margin-bottom: 150px;"></nav> --> 
 
- <div>
+<div>
      <h1> Introduction To Angular </h1>
 </div> 
 
 
-<!-- <app-parent></app-parent> -->
-<router-outlet></router-outlet>
-  <app-table></app-table> 
-<!-- 
-<router-outlet name="childroute"></router-outlet>                         
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="pipes-tab" data-toggle="tab"   [routerLink]="pipeRoute"   role="tab" aria-controls="pipes" aria-selected="true">Pipes</a>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" id="table-tab" data-toggle="tab"   [routerLink]="tableRoute"   role="tab" aria-controls="table" aria-selected="false">Table</a>
+    </li>
+  </ul>
 
+<!-- ---------------------------------------------------------------------------------- -->
 
-<app-test-encapsulation></app-test-encapsulation> 
-   
-<app-ngif-demo></app-ngif-demo>  -->
-                                 
-
-<!-- <app-pipes></app-pipes>
+<!-- <a href="/pipes">Pipes</a>                                // Refreshes entire Web-Page  , should not be preffered
+<a href="/app-table">Table</a> --> 
  
-<app-data-binding></app-data-binding> -->
+<!-- <a routerLink="pipes">Pipes</a>                           // Angular's way of routing (Without refreshing Web-Page)   
+<a routerLink="app-table">Table</a> -->                        
+    <!--       OR          -->
+<!-- <a [routerLink]="pipeRoute">Pipes</a>                     // Using Class Property Resolution (class member variables in app.component.ts)       
+<a [routerLink]="tableRoute">Table</a> -->                     
+    <!--       OR          -->
+<!--  <a *ngFor="let route of routes" [routerLink]="route.url">{{route.linkName}}</a>           // Routing Dynamically using  routes[] in  AppComponent class            -->
+<!-- ---------------------------------------------------------------------------------- -->
 
-<!-- <app-ngfor-demo></app-ngfor-demo>  -->
+
+<router-outlet></router-outlet>
+
+
+<!-- <app-table></app-table> 
+<app-parent></app-parent>  
+<app-data-binding></app-data-binding>
+<router-outlet name="childroute"></router-outlet>                         
+<app-test-encapsulation></app-test-encapsulation> 
+<app-ngif-demo></app-ngif-demo>  
+<app-pipes></app-pipes>
+<app-ngfor-demo></app-ngfor-demo>  -->

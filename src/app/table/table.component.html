@@ -1,23 +1,26 @@
-<table>
-  <tr>
-       <th *ngFor="let column of tableHeaders"> 
-          {{column}}
-      </th>
-  </tr>
+<div class="container-md">
+    <table>
+      <tr>
+          <th *ngFor="let column of tableHeaders"> 
+              {{column}}
+          </th>
+      </tr>
 
-   <tr *ngFor="let row of countries; let i=index;"> 
-       <td *ngFor="let column of tableHeaders" (click)="toggle($event,i)">  
-            {{row[column]}} 
-       </td>
-  </tr>
-</table> 
+      <tr *ngFor="let row of countries; let i=index;"> 
+          <td *ngFor="let column of tableHeaders" (click)="toggle($event,i)">  
+                {{row[column]}} 
+          </td>
+      </tr>
+    </table> 
+</div>
 
 <br>    
 <hr>
 <br>
 
+<div class="container-md">
 <div *ngIf="showData">
-  
+ 
    <button type="button" class="buttonStyle" (click)="setForm($event)">Add State</button>
 
     <form [formGroup]="registerForm" *ngIf="showForm">
@@ -63,12 +66,12 @@
             </td>
         </tr>
     </table>
-
-    <br>
-    <br>
-    <br>
-
   </div>
+    <br>
+    <br>
+    <br>
+
+</div>
 
 <!-- ----------------------------------------------------------------------------------------------- -->
 

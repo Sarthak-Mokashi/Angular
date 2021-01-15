@@ -12,4 +12,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'new-angular-app';
+
+  pipeRoute = "pipes";                          // Routing using member variables
+  tableRoute = "app-table";
+
+  // routes =[
+  //   { linkName: 'Pipes' , url: 'pipes'},
+  //   { linkName: 'Table' , url: 'app-table'}
+  // ];
+
 }

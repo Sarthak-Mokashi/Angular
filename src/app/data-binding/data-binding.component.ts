@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';       // For Parameterised Routes
 
 @Component({
   selector: 'app-data-binding',
@@ -57,7 +58,17 @@ export class DataBindingComponent implements OnInit {
 
   username = " Initial Temp Value ";
 
-  constructor() { }
+  // For Parameterised Routes
+  dataId = 0;
+  bindingId = 0;
+
+  constructor(private activatedRoute : ActivatedRoute ) {           // For Parameterised Routes
+
+    // First check path in 'app-routing.module.ts' file
+    this.activatedRoute.params.subscribe((params => {
+      
+    }))
+  }
 
   ngOnInit(): void {
   }

@@ -6,9 +6,20 @@ import { NgforDemoComponent } from './ngfor-demo/ngfor-demo.component';
 import { NgifDemoComponent } from './ngif-demo/ngif-demo.component';
 import { ParentComponent } from './parent/parent.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { TableComponent } from './table/table.component';
 import { TestEncapsulationComponent } from './test-encapsulation/test-encapsulation.component';
 
+
+
 const routes: Routes = [
+
+ // <!-- -------------- PARAMETERISED ROUTES(Dynamic URL Parameters) /:id ------------------ -->
+ 
+   { path: 'data-binding/:id',  component: DataBindingComponent },
+   { path: 'data-binding/:dataId/binding/:bindingId',  component: DataBindingComponent },
+
+  // <!------------------------------------------------------------>
+
   {
     path: 'child',
     component: ChildComponent,
@@ -29,10 +40,10 @@ const routes: Routes = [
     redirectTo: 'data-binding'
   },
 
-  {
-    path: 'data-binding',
-    component: DataBindingComponent
-  },
+  // {
+  //   path: 'data-binding',
+  //   component: DataBindingComponent
+  // },
 
   {
     path: 'ngfor-demo',
@@ -59,6 +70,10 @@ const routes: Routes = [
     component: TestEncapsulationComponent
   },
 
+  {
+    path: 'app-table',
+    component: TableComponent
+  }
 
 ];
 
