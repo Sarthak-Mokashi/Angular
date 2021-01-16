@@ -15,6 +15,11 @@ export class AppComponent {
 
   pipeRoute = "pipes";                          // Routing using member variables
   tableRoute = "app-table";
+  ngForRoute = "ngfor-demo";
+  ngIfRoute = "ngif-demo";
+  dataBindingRoute = "data-binding";
+  parentRoute = "parent";
+  viewEncapsulationRoute = "test-encapsulation";
 
   // routes =[
   //   { linkName: 'Pipes' , url: 'pipes'},

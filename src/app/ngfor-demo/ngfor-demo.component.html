@@ -1,39 +1,44 @@
-<h1> List of Countries </h1>
+<div class="container-sm">
+    <br>
+    <br>
+    <h1> List of Countries in Different Ways : </h1>
 
-<!-- <ul>
-    <li *ngFor = "let country of countries">                              // Normal For Loop
-        {{ country.name }}
-    </li>
-</ul> -->
-
-
-
-<!-- <ul>
-    <li *ngFor = "let country of countries">                             
-        {{ country.name }} {{ country.national_language}} {{ country.currency }}           // With multiple parameters
-    </li>
-</ul> -->
+    <ul>
+        <li *ngFor = "let country of countries">                              
+            {{ country.name }}
+        </li>
+    </ul> 
 
 
+    <div>
+        <ul>
+            <li *ngFor = "let country of countries">                             
+                {{ country.name }} {{ country.national_language}} {{ country.currency }}           <!-- // With multiple parameters  -->
+            </li>
+        </ul>
+    </div>
 
-<!-- <ul>
-    <li *ngFor = "let country of countries; index as i">                             
-        {{ i }}{{ country.name }} {{ country.national_language}} {{ country.currency }}        // Using Local Variables
-    </li>
-</ul> -->
+    <div>
+        <ul>
+            <li *ngFor = "let country of countries; index as i">                             
+                {{ i }}{{ country.name }} {{ country.national_language}} {{ country.currency }}        <!--  // Using Local Variables  -->
+            </li>
+        </ul> 
+    </div>
 
 
-
- <!-- <ul>
-    <li *ngFor = "let country of countries; index as i; first as f; last as l"> 
-        <div *ngIf ="f" style="background-color:rgb(16, 191, 214);">This is First Record</div>  
-            <div>                                                                                       
-              {{ i }} {{ country.name }} {{ country.national_language}} {{ country.currency }}          
-            </div>
-        <div *ngIf ="l" style="background-color:rgb(20, 179, 60);">This is Last Record</div>
-    </li>
-</ul>  -->
-
+    <div>
+        <ul>
+            <li *ngFor = "let country of countries; index as i; first as f; last as l">                     <!-- // Using Multiple Local Variables  -->
+                <div *ngIf ="f" style="background-color:rgb(16, 191, 214);">This is First Record</div>  
+                    <div>                                                                                       
+                    {{ i }} {{ country.name }} {{ country.national_language}} {{ country.currency }}          
+                    </div>
+                <div *ngIf ="l" style="background-color:rgb(20, 179, 60);">This is Last Record</div>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <!--  -------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -92,7 +97,7 @@
 
 <!-- ------------------------------------------------------------------------------------------------------------------------------------- -->
     
- <table>
+ <!-- <table>
        <tr>
             <th *ngFor="let column of tableHeaders"> 
                {{column}}
@@ -125,6 +130,6 @@
 
     <br>
     <br>
-    <br>
+    <br> -->
 
    

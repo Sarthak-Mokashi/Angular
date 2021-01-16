@@ -8,28 +8,37 @@ import { DataServiceService } from '../data-service.service';
 })
 export class NgforDemoComponent implements OnInit {
   
-  countryIndex=0;
-  showData = false;
-  tableHeaders: any = [];
-  stateTableHeaders: any = [];
-  countries :any = [];
-
  // constructor(private dataService : DataServiceService) { }              // If calling Service's Method only from this Class
 
-  constructor(public dataService : DataServiceService) { }                 // If calling Service's Method directly from template
+  constructor() { }                 // If calling Service's Method directly from template
 
-  ngOnInit(): void 
-    {
-       console.log(this.dataService.getCountries());
-       this.tableHeaders = this.dataService.getCountriesHeaders();
-       this.stateTableHeaders = this.dataService.getStateHeaders();
-       this.countries = this.dataService.getCountries();
-    }
+  ngOnInit(): void { }
 
-  public toggle(event: any,index:number)
-    {
-       console.log('event id is'+event);
-       this.showData = !this.showData;
-       this.countryIndex=index
-    }
+    countries: any = [                                                              // Array
+      {
+        name : "INDIA" , 
+        national_language : "Hindi",
+        currency : "INR"
+      },
+    
+      {
+        name : "USA" , 
+        national_language : "English-US",
+        currency : "USD"
+      },
+  
+      {
+        name : "GERMANY" , 
+        national_language : "German",
+        currency : "EURO"
+      },
+  
+      {
+        name : "UAE" , 
+        national_language : "Arabic",
+        currency : "DIRHAM"
+      }
+    
+    ];
+
 }

@@ -1,25 +1,30 @@
-<div>
+<div class="container-sm">
+    <br>
+    <br>
     <div>
         <div>
-            <h4>Parent Component</h4>
+            <div>
+                <h4>Parent Component</h4>
+            </div>
+
+            <!-- <div class="card-body">
+                Pass Data: <input type="text"/>
+                <input type="button" value="SEND" (click)="TransferData()"/>
+            </div> -->
         </div>
-
-        <!-- <div class="card-body">
-            Pass Data: <input type="text"/>
-            <input type="button" value="SEND" (click)="TransferData()"/>
-        </div> -->
     </div>
+    <!-- <app-child [parentData]="parentData"></app-child> 
+    {{value}}   
+    <app-child (sendData)="sendChildData($event)"></app-child>    -->
+
+    <!---------------------------------------------------------------------------------->
+
+    <!-- <input type="text" (keyup.enter) ="passValue($event)"/>                                  // New Demo
+    <app-child [name]="data"></app-child> -->                                                     
+
+    <!---------------------------------------------------------------------------------->
+
+    Enter Name : <input type="text" (keyup.enter) ="passValue($event)"/>                                 
+    <app-child [list]="nameList"></app-child>
+
 </div>
-  <!-- <app-child [parentData]="parentData"></app-child> 
-   {{value}}   
- <app-child (sendData)="sendChildData($event)"></app-child>    -->
-
- <!---------------------------------------------------------------------------------->
-
- <!-- <input type="text" (keyup.enter) ="passValue($event)"/>                                  // New Demo
- <app-child [name]="data"></app-child> -->                                                     
-
- <!---------------------------------------------------------------------------------->
-
- Enter Name : <input type="text" (keyup.enter) ="passValue($event)"/>                                 
- <app-child [list]="nameList"></app-child>

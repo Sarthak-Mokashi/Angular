@@ -40,10 +40,10 @@ const routes: Routes = [
     redirectTo: 'data-binding'
   },
 
-  // {
-  //   path: 'data-binding',
-  //   component: DataBindingComponent
-  // },
+  {
+    path: 'data-binding',
+    component: DataBindingComponent
+  },
 
   {
     path: 'ngfor-demo',

@@ -1,41 +1,60 @@
+<div class="container-lg">
+  <br>
+  <br>
+    <div>
+        <h1 style="text-align:center;"> Introduction To Angular </h1>
+    </div> 
+    <br>
 
-<div>
-     <h1> Introduction To Angular </h1>
-</div> 
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="pipes-tab" data-toggle="tab"   [routerLink]="pipeRoute"   role="tab" aria-controls="pipes" aria-selected="true">Pipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="table-tab" data-toggle="tab"   [routerLink]="tableRoute"   role="tab" aria-controls="table" aria-selected="false">Table</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ngfor-tab" data-toggle="tab"   [routerLink]="ngForRoute"   role="tab" aria-controls="ngfor" aria-selected="false">NgFor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="ngif-tab" data-toggle="tab"   [routerLink]="ngIfRoute"   role="tab" aria-controls="ngif" aria-selected="false">NgIf</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="data-binding-tab" data-toggle="tab"   [routerLink]="dataBindingRoute"   role="tab" aria-controls="data-binding" aria-selected="false">Data-Binding</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="parent-tab" data-toggle="tab"   [routerLink]="parentRoute"   role="tab" aria-controls="parent" aria-selected="false">Parent</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="test-encapsulation-tab" data-toggle="tab"   [routerLink]="viewEncapsulationRoute"   role="tab" aria-controls="test-encapsulation" aria-selected="false">View-Encapsulation</a>
+          </li>
+      </ul>
+
+    <!-- ---------------------------------------------------------------------------------- -->
+
+    <!-- <a href="/pipes">Pipes</a>                                // Refreshes entire Web-Page  , should not be preffered
+    <a href="/app-table">Table</a> --> 
+    
+    <!-- <a routerLink="pipes">Pipes</a>                           // Angular's way of routing (Without refreshing Web-Page)   
+    <a routerLink="app-table">Table</a> -->                        
+        <!--       OR          -->
+    <!-- <a [routerLink]="pipeRoute">Pipes</a>                     // Using Class Property Resolution (class member variables in app.component.ts)       
+    <a [routerLink]="tableRoute">Table</a> -->                     
+        <!--       OR          -->
+    <!--  <a *ngFor="let route of routes" [routerLink]="route.url">{{route.linkName}}</a>           // Routing Dynamically using  routes[] in  AppComponent class            -->
+    <!-- ---------------------------------------------------------------------------------- -->
 
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" id="pipes-tab" data-toggle="tab"   [routerLink]="pipeRoute"   role="tab" aria-controls="pipes" aria-selected="true">Pipes</a>
-    </li>
-     <li class="nav-item">
-      <a class="nav-link" id="table-tab" data-toggle="tab"   [routerLink]="tableRoute"   role="tab" aria-controls="table" aria-selected="false">Table</a>
-    </li>
-  </ul>
-
-<!-- ---------------------------------------------------------------------------------- -->
-
-<!-- <a href="/pipes">Pipes</a>                                // Refreshes entire Web-Page  , should not be preffered
-<a href="/app-table">Table</a> --> 
- 
-<!-- <a routerLink="pipes">Pipes</a>                           // Angular's way of routing (Without refreshing Web-Page)   
-<a routerLink="app-table">Table</a> -->                        
-    <!--       OR          -->
-<!-- <a [routerLink]="pipeRoute">Pipes</a>                     // Using Class Property Resolution (class member variables in app.component.ts)       
-<a [routerLink]="tableRoute">Table</a> -->                     
-    <!--       OR          -->
-<!--  <a *ngFor="let route of routes" [routerLink]="route.url">{{route.linkName}}</a>           // Routing Dynamically using  routes[] in  AppComponent class            -->
-<!-- ---------------------------------------------------------------------------------- -->
+    <router-outlet></router-outlet>
 
 
-<router-outlet></router-outlet>
+    <!-- <app-table></app-table> 
+    <app-parent></app-parent>  
+    <app-data-binding></app-data-binding>
+    <router-outlet name="childroute"></router-outlet>                         
+    <app-test-encapsulation></app-test-encapsulation> 
+    <app-ngif-demo></app-ngif-demo>  
+    <app-pipes></app-pipes>
+    <app-ngfor-demo></app-ngfor-demo>  -->
 
-
-<!-- <app-table></app-table> 
-<app-parent></app-parent>  
-<app-data-binding></app-data-binding>
-<router-outlet name="childroute"></router-outlet>                         
-<app-test-encapsulation></app-test-encapsulation> 
-<app-ngif-demo></app-ngif-demo>  
-<app-pipes></app-pipes>
-<app-ngfor-demo></app-ngfor-demo>  -->
+</div>
