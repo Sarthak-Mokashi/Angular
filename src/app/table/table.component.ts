@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router , ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-table',
@@ -14,13 +15,19 @@ export class TableComponent implements OnInit {
   newState: any[] = [];
   submitted = false;
   registerForm: any;
+  name = '';
  
-  constructor(private formBuilder: FormBuilder) 
+  constructor(private formBuilder: FormBuilder ,private route: ActivatedRoute , private router: Router) 
   { 
     this.registerForm= FormGroup;
   }
 
   ngOnInit(): void {
+
+    this.route.queryParams.subscribe(params => {
+      this.name = params['name'];
+     console.log(params);
+    });
 
     this.registerForm = this.formBuilder.group({
       Name: [''],
@@ -144,6 +151,8 @@ export class TableComponent implements OnInit {
      console.log('event id is'+event);
      this.showData = !this.showData;
      this.countryIndex=index;
+    // this.router.navigate(['/app-table', this.countryIndex]);
+    this.router.navigate(['/app-table', this.countries[this.countryIndex].Name]);  // To Display Country Name in URL
   }
 
 

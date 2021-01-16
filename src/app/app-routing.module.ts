@@ -26,6 +26,7 @@ const routes: Routes = [
     outlet: 'childroute'
   },
 
+  
 
   // {  
   //   path: 'parent',                                                            // Children Option
@@ -73,7 +74,9 @@ const routes: Routes = [
   {
     path: 'app-table',
     component: TableComponent
-  }
+  },
+
+  { path: 'app-table/:id' , component: TableComponent },        // For country name in URL
 
 ];
 
